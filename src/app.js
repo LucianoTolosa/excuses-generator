@@ -6,6 +6,29 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
+  let who = ["The dog", "My grandma", "His turtle", "My bird"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    "before the class",
+    "right on time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
+
+  let RandomWho = who[Math.floor(Math.random() * 4)];
+  let RandomAction = action[Math.floor(Math.random() * 4)];
+  let RandomWhat = what[Math.floor(Math.random() * 3)];
+  let RandomWhen = when[Math.floor(Math.random() * 4)];
+  let Excuse;
+  function ExcusesGenerator() {
+    Excuse =
+      RandomWho + " " + RandomAction + " " + RandomWhat + " " + RandomWhen;
+    return Excuse;
+  }
+  console.log(ExcusesGenerator());
+  document.getElementById("Excuses").innerHTML = Excuse;
+
   console.log("Hello Rigo from the console!");
 };
